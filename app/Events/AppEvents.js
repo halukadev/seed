@@ -10,9 +10,7 @@ Event.on('CoreProviders.Resolved', /* istanbul ignore next */ function (event, a
 
 // App Providers Resolved
 Event.on('AppProviders.Resolved', /* istanbul ignore next */ function (event, app) {
-
-	console.log('Application about to be Booted!')
-	
+	// console.log('Application about to be Booted!')
 })
 
 // On Successful Server Bootstrapping
