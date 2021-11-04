@@ -9,7 +9,9 @@ module.exports = {
     /**
      * Aliases for Providers
      */
-    aliases: {},
+    aliases: {
+        Console: 'Haluka/Console'
+    },
 
     /**
      * Middlewares that are registered globally for all the routes.
