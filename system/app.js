@@ -14,5 +14,7 @@ require('./events');
 /**
  * Boot Haluka
  */
+require('./helpers')
+
 let appData = require(app.appPath('app.js'));
 app.boot(appData)

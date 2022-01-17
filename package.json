@@ -4,8 +4,10 @@
     "@haluka/core": "github:halukajs/core",
     "@haluka/express-dispatcher": "github:halukadev/express-dispatcher",
     "@haluka/routing": "github:halukajs/routing",
-    "@halukajs/axe": "github:halukadev/axe",
     "debug": "^4.3.2",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@haluka/axe": "github:halukadev/axe"
   }
 }
