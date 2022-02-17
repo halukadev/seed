@@ -1,13 +1,19 @@
 {
   "name": "haluka-example",
+  "version": "1.0.0",
+  "description": "An Example Haluka App",
+  "private": true,
+  "scripts": {
+    "start": "node index",
+    "serve": "node index",
+    "serve:dev": "NODE_ENV=develop nodemon index.js",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "@haluka/core": "github:halukajs/core",
     "@haluka/express-dispatcher": "github:halukadev/express-dispatcher",
     "@haluka/routing": "github:halukajs/routing",
     "debug": "^4.3.2",
     "pug": "^3.0.2"
-  },
-  "devDependencies": {
-    "@haluka/axe": "github:halukadev/axe"
   }
 }
