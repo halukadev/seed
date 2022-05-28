@@ -1,36 +1,28 @@
-'use strict'
 
-const { Router } = require('@haluka/routing')
+const FactoryExpressDispatcher = require('@haluka/express-dispatcher').default
+const Setup = require('./express-hooks')
 
+class ExpressDispatcher extends FactoryExpressDispatcher {
 
-/**
- * Create a Router
- */
-const r = new Router({
-    path: app().routesPath()
-})
+    create () {
+        let express = super.create()
 
-app().save({
-    name: 'Haluka/Routing/Router',
-    alias: 'Router'
-}, r)
+        Setup(express)
 
+        return express
+    }
 
-/**
- * Include routes file to add routes into the application
- */
-r.group({}, 'web')
+    errorHandler(err, req, res, next) {
+        app('Events').emit('Http.Error.*', err, req, res)
+    }
 
-/**
- * Setup Router Dispatcher
- */
-const ExpressDispatcher = require('./express').default
-const express = new ExpressDispatcher(r, {
-    path: app().controllersPath(),
-}).createAndDispatch()
+    onRequest(req, res) {
+        app('Events').fire('Http.RequestReceived', req, res)
+    }
 
-use('Events').fire('Http.RouterDispatched')
+    onResponse(req, res, output) {
+        app('Events').fire('Http.ResponseServed', req, res)
+    }
+}
 
-let port = env('PORT') || 3000
-express.listen({ port })
-use('Events').fire('Http.StartedListening', express, port)
+exports.default = ExpressDispatcher

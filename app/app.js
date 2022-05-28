@@ -10,7 +10,6 @@ module.exports = {
      * Aliases for Providers
      */
     aliases: {
-        Console: 'Haluka/Console'
     },
 
     /**

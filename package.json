@@ -13,7 +13,17 @@
     "@haluka/core": "github:halukajs/core",
     "@haluka/express-dispatcher": "github:halukadev/express-dispatcher",
     "@haluka/routing": "github:halukajs/routing",
+    "body-parser": "^1.20.0",
+    "chalk": "^4.1.2",
+    "compression": "^1.7.4",
     "debug": "^4.3.2",
-    "pug": "^3.0.2"
+    "express-session": "^1.17.3",
+    "helmet": "^5.1.0",
+    "pug": "^3.0.2",
+    "youch": "^3.2.0",
+    "youch-terminal": "^2.1.4"
+  },
+  "autoLoad": {
+    "Haluka": "@haluka/core/build/src/ServiceProviders"
   }
 }

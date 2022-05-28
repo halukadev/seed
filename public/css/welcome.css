@@ -1,0 +1,100 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+body {
+	margin: 0;
+	font-family: 'Titillium Web', cursive;
+	color: rgb(100, 100, 100);
+}
+
+header {
+	width: 100%;
+	height: 65px;
+	background: #558B2F;
+	padding: 5px 0;
+}
+
+#haluka-logo {
+	color: #FFFFFF;
+	font-size: 35px;
+}
+
+#js-label {
+	color: #FF6666;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 0px 2px;
+}
+
+/* Float Declarations */
+.floatleft { float: left; }
+.floatright { float: right; }
+.clear { clear:both; }
+
+.container {
+	max-width: 940px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+
+/* Main Section : Custom Jumbotron */
+section.main{
+	height: calc(100vh - 65px);
+	background: url(/images/design.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.maincontent {
+	padding-top: 20vh;
+	color: #222222;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+	text-align: center;
+}
+
+section.main h1 {
+	margin-top: 20px;
+	font-size: 400%;
+	padding-top: 50px;
+	font-family: 'Poiret One', cursive;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+section.main h2 {
+	font-size: 250%;
+	margin: 10px;
+	font-family: 'Poiret One', cursive;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+section.main p {
+
+	margin-top: 90px;
+	font-size: 190%;
+	margin-bottom: 60px;
+	color: #FF6666;
+}
+
+
+
+/* Footer */
+footer{
+  width: 100%;
+  top: 92vh;
+  position: fixed;
+  font-size: 115%;
+  background-color: #FFFFFF;
+  border-top: 1.5px solid #AAAAAA;
+}
+
+footer p{
+	margin-right: 50px;
+  	padding-top: 20px;
+	float: right;
+	color: #303030;
+}

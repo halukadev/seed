@@ -12,7 +12,7 @@ module.exports = {
 	| application's name is required.
 	|
 	*/
-	name: env.get('APP_NAME', 'Haluka Lite'),
+	name: env.get('APP_NAME', 'Haluka Full Stack App'),
 
 
 	/*

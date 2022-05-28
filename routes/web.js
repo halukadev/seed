@@ -8,7 +8,7 @@ let Route = exports.Route = use('Router')
 
 Route.get('/', 'Home.index')
 
-Route.get('/home', function ({ Response }) {
+Route.get('/home', function ({ Response, res }) {
 
     Response.end("Hello, World!")
 
